@@ -1,5 +1,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![npm version](https://badge.fury.io/js/date-wrapper.svg)](https://badge.fury.io/js/date-wrapper)
 [![Build Status](https://travis-ci.org/sayelr/date-wrapper.svg?branch=master)](https://travis-ci.org/sayelr/date-wrapper)
 [![codecov](https://codecov.io/gh/sayelr/date-wrapper/branch/master/graph/badge.svg)](https://codecov.io/gh/sayelr/date-wrapper)
 
