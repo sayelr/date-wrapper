@@ -51,7 +51,7 @@ function isValidJsDate(obj) {
 function cloneAsDate(dateObj) {
   if (isValidJsDate(dateObj)) {
     return new Date(dateObj.getTime());
-  } else if (dateObj.isDateWrapper) {
+  } else if (dateObj && dateObj.isDateWrapper) {
     return new Date(dateObj._baseDate.getTime());
   }
 }

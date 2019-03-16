@@ -73,6 +73,10 @@ describe('Initialization', () => {
       });
     });
   });
+  it('test for valid year range', () => {
+    assert(!D(new Date()).addYears(200));
+    assert(!D('12/31/2099').addTime(25));
+  });
 });
 
 describe('Manipulation', () => {
@@ -221,6 +225,10 @@ describe('Manipulation', () => {
 
 describe('Comparing', () => {
   describe('.equals(date, compareTimes?)', () => {
+    it('returns undefined when compareTo date is null', () => {
+      const d = D(new Date());      
+      assert(!d.equals());
+    });
     it('equals ignoring times works', () => {
       const startOfDay = D('01/01/2000');
       const noon = D('01/01/2000').setTime(12);
@@ -302,6 +310,13 @@ describe('Comparing', () => {
     });
   });
   describe('.from(date)', () => {
+    it('from() returns undefined when no arg passed', () => {
+      assert(!D('02/01/2000').from());
+      assert(D('02/01/2000').from(D(new Date(2000, 0, 1))) instanceof Object);
+    });
+    it('from() returns undefined when invalid js date', () => {
+      assert(!D('02/01/2000').from(new Date('asdf')));
+    });
     it('from() works with Dates or DateWrapper objects', () => {
       assert(D('02/01/2000').from(D('01/01/2000')) instanceof Object);
       assert(D('02/01/2000').from(D(new Date(2000, 0, 1))) instanceof Object);
@@ -379,6 +394,12 @@ describe('Immutability', () => {
 });
 
 describe('ToString() Formatting', () => {
+  it('returns default toString output when param is null or empty string', () => {
+    const dt = new Date();
+    const dw = D(dt);
+    assert.equal(dw.toString(), dt.toString());
+    assert.equal(dw.toString(''), dt.toString());
+  });
   it('key yyyy works', () => {
     const dw = D('07/04/2019').setTime(21, 30, 15, 402);
     assert.equal(dw.toString('yyyy'), '2019');
@@ -426,6 +447,10 @@ describe('ToString() Formatting', () => {
   it('key hh works', () => {
     const dw = D('07/04/2019').setTime(21, 30, 15, 402);
     assert.equal(dw.toString('hh'), '09');
+  });
+  it('key H works', () => {
+    const dw = D('07/04/2019').setTime(5, 30, 15, 402);
+    assert.equal(dw.toString('H'), '5');
   });
   it('key HH works', () => {
     const dw = D('07/04/2019').setTime(21, 30, 15, 402);
