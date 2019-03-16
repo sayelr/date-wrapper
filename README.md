@@ -12,9 +12,9 @@ A simple library to wrap js dates with extra functionality, easy validation, imm
 ```npm install date-wrapper```  
 
 **In browser using script tags**  
-umd:  ```./dist/date-wrapper.umd.js```  ```./dist/date-wrapper.umd.min.js```    
-iife: ```./dist/date-wrapper.iife.js``` ```./dist/date-wrapper.iife.min.js```
-
+```date-wrapper.umd.js```  ```date-wrapper.umd.min.js```     
+```date-wrapper.iife.js``` ```date-wrapper.iife.min.js```  
+cdn: ```https://unpkg.com/date-wrapper@1.0.0/dist/``` + one of the above
 
 ## Features and Examples
 **Create an object using strings or standard js Dates**
