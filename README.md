@@ -12,7 +12,7 @@ A simple library to wrap js dates with extra functionality, easy validation, imm
 ```npm install date-wrapper```  
 
 **In browser using script tags**  
-iife or umd
+(iife or umd)  
 ```date-wrapper.umd.js```  ```date-wrapper.umd.min.js```     
 ```date-wrapper.iife.js``` ```date-wrapper.iife.min.js```  
 
