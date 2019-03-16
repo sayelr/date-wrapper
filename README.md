@@ -1,3 +1,8 @@
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/sayelr/date-wrapper.svg?branch=master)](https://travis-ci.org/sayelr/date-wrapper)
+[![codecov](https://codecov.io/gh/sayelr/date-wrapper/branch/master/graph/badge.svg)](https://codecov.io/gh/sayelr/date-wrapper)
+
 # Date Wrapper
 A simple library to wrap js dates with extra functionality, easy validation, immutability, chainability, and string formatting 
 - **No external dependencies**  
