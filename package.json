@@ -5,8 +5,8 @@
   "version": "1.0.0",
   "description": "an immutable, chainable wrapper for Dates with easy string validation, manipulation, and comparison functionality",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/sayelr/date-wrapper.git"
+    "type": "git",
+    "url": "https://github.com/sayelr/date-wrapper.git"
   },
   "source": "src/esm/index.js",
   "main": "dist/date-wrapper.cjs.js",
@@ -16,6 +16,8 @@
   ],
   "scripts": {
     "test": "mocha --require @babel/register ./test/test.js",
+    "cover": "nyc node_modules/mocha/bin/_mocha -- --require @babel/register ./test/test.js",
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "lint": "eslint ./src/",
     "prebuild": "npm run lint && rimraf dist && npm run test",
     "build": "npx rollup -c",
@@ -28,7 +30,9 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/register": "^7.0.0",
     "chai": "^4.2.0",
+    "codecov": "^3.2.0",
     "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
     "rimraf": "^2.6.3",
     "rollup-plugin-commonjs": "^9.2.1",
     "rollup-plugin-node-resolve": "^4.0.1",
