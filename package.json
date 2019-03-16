@@ -15,7 +15,7 @@
     "dist"
   ],
   "scripts": {
-    "test": "mocha --require @babel/register ./test/test.js",
+    "test": "_mocha --require @babel/register ./test/test.js",
     "cover": "nyc node_modules/mocha/bin/_mocha -- --require @babel/register ./test/test.js",
     "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "lint": "eslint ./src/",
