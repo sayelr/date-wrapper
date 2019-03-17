@@ -2,7 +2,7 @@
   "author": "Sayel Rammaha",
   "license": "MIT",
   "name": "date-wrapper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "an immutable, chainable wrapper for Dates with easy string validation, manipulation, and comparison functionality",
   "repository": {
     "type": "git",
