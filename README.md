@@ -1,4 +1,3 @@
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm version](https://badge.fury.io/js/date-wrapper.svg)](https://badge.fury.io/js/date-wrapper)
 [![Build Status](https://travis-ci.org/sayelr/date-wrapper.svg?branch=master)](https://travis-ci.org/sayelr/date-wrapper)
@@ -12,8 +11,7 @@ A simple library to wrap js dates with extra functionality, easy validation, imm
 **Available as npm package including cjs, esm, umd, and iife**  
 ```npm install date-wrapper```  
 
-**In browser using script tags (iife or umd options)**  
-```date-wrapper.umd.js```  ```date-wrapper.umd.min.js```     
+**In browser using script tags**   
 ```date-wrapper.iife.js``` ```date-wrapper.iife.min.js```  
 
 ## Features and Examples
@@ -179,15 +177,18 @@ D('05/15/2019').lastOfYear();    // Tue Dec 31 2019 00:00:00
 
 |code| example | |code| example | |code| example | |code| example |
 |----|---------|-|----|---------|-|----|---------|-|----|---------|
-|yyyy|2019     | |M   |1        | |d   |1        | |h   |4        |
-|yy  |19       | |MM  |01       | |dd  |01       | |hh  |04       |
-|    |         | |MMM |Jan      | |ddd |Tue      | |mm  |29       |
-|    |         | |MMMM|January  | |dddd|Tuesday  | |ss  |59       |
+|yyyy|2019     | |M   |1        | |d   |1        | |H   |16       |
+|yy  |19       | |MM  |01       | |dd  |01       | |HH  |16       |
+|    |         | |MMM |Jan      | |ddd |Tue      | |h   |4        |
+|    |         | |MMMM|January  | |dddd|Tuesday  | |hh  |04       |
+|    |         | |    |         | |    |         | |mm  |29       | 
+|    |         | |    |         | |    |         | |ss  |59       |
 |    |         | |    |         | |    |         | |fff |050      | 
-|    |         | |    |         | |    |         | |tt  |PM       |
+|    |         | |    |         | |    |         | |tt  |PM       |  
+
 ```javascript
 var date = D('01/01/2019').setTime(16, 29, 59, 50);
 date.toString('MM/dd/yy');                           // '01/01/19'
 date.toString('dddd MMMM d, yyyy hh:mm:ss.fff tt');  // 'Tuesday January 1, 2019 04:29:59.050 PM'
-var timestamp = date.toString('yyyyMMdd-hhmmss');    // '20190101-042959'
+var timestamp = date.toString('yyyyMMdd-HHmmss');    // '20190101-162959'
 ```

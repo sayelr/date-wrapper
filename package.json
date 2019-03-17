@@ -11,7 +11,7 @@
   "source": "src/esm/index.js",
   "main": "dist/date-wrapper.cjs.js",
   "module": "dist/date-wrapper.esm.js",
-  "browser": "dist/date-wrapper.umd.min.js",
+  "browser": "dist/date-wrapper.iife.min.js",
   "files": [
     "dist"
   ],
